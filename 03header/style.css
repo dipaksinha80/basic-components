@@ -1,0 +1,77 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: darkgrey;
+}
+.container {
+  background-color: antiquewhite;
+  padding: 4px 0;
+}
+nav {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+li {
+  margin-left: 35px;
+}
+li a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.btn {
+  background-color: white;
+  border: 1px solid violet;
+  padding: 5px 10px;
+  font-size: 16px;
+  transition: all 0.2s ease-in;
+  border-radius: 3px;
+}
+.btn:hover {
+  border-color: black;
+}
+/* Now toggle menu css open */
+.toggle-container {
+  display: none;
+}
+
+.toggle-container .bar {
+  width: 20px;
+  height: 3px;
+  background-color: rgb(51, 42, 42);
+  border-radius: 5px;
+  margin-bottom: 3px;
+  transition: all 0.3s ease-in-out;
+}
+.change #bar1 {
+  transform: translate(0, 12px) rotate(45deg);
+}
+.change #bar2 {
+  opacity: 0;
+}
+.change #bar3 {
+  transform: translate(0, 0px) rotate(-45deg);
+}
+/* media query for responsive */
+@media screen and (max-width: 600px) {
+  ul {
+    display: none;
+  }
+  .toggle-container {
+    display: block;
+  }
+}
