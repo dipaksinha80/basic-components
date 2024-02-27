@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02 Menu bar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- <div class="container" onclick="myFunction(this)"> -->
+      <div class="lines" id="bar1"></div>
+      <div class="lines" id="bar2"></div>
+      <div class="lines" id="bar3"></div>
+    </div>
+    <script>
+      const click = document.querySelector(".container");
+      click.addEventListener("click", function () {
+        click.classList.toggle("change");
+      });
+
+      //   alternative
+      //   function myFunction(x) {
+      //     x.classList.toggle("change");
+      //   }
+    </script>
+  </body>
+</html>
