@@ -3,9 +3,12 @@
   margin: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: darkgrey;
+  /* background-color: darkgrey; */
 }
 .container {
   background-color: antiquewhite;
@@ -14,36 +17,52 @@ body {
 nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 90%;
   max-width: 1080px;
   margin: 0 auto;
-  justify-content: space-between;
+  position: relative;
+}
+.ul-container {
+  display: flex;
 }
 ul {
   list-style: none;
   display: flex;
   align-items: center;
+  overflow: hidden;
+  animation: slideIn 0.5s ease-in-out;
+}
+.block {
+  display: block;
 }
 li {
-  margin-left: 35px;
+  margin: 15px;
+  width: 100%;
+  transition: all 0.2s ease-in;
+  border: 1px solid transparent;
+}
+li:hover {
+  background-color: white;
+  border-color: black;
 }
 li a {
   text-decoration: none;
   color: black;
   font-size: 16px;
+  padding: 5px 9px;
+  display: block;
   letter-spacing: 1px;
 }
 .btn {
   background-color: white;
-  border: 1px solid violet;
+  border: 1px solid black;
   padding: 5px 10px;
   font-size: 16px;
   transition: all 0.2s ease-in;
-  border-radius: 3px;
+  width: 100%;
 }
-.btn:hover {
-  border-color: black;
-}
+
 /* Now toggle menu css open */
 .toggle-container {
   display: none;
@@ -66,10 +85,33 @@ li a {
 .change #bar3 {
   transform: translate(0, 0px) rotate(-45deg);
 }
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-25%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 /* media query for responsive */
 @media screen and (max-width: 600px) {
-  ul {
+  .ul-container ul {
     display: none;
+    width: 100%;
+    z-index: 99;
+    position: absolute;
+    background-color: rgb(195, 0, 255);
+    height: auto;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  ul li {
+    text-align: center;
   }
   .toggle-container {
     display: block;
