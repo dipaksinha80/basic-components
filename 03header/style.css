@@ -88,13 +88,29 @@ li a {
 
 @keyframes slideIn {
   from {
-    transform: translateX(-25%);
+    transform: translateX(-100%);
     opacity: 0;
   }
   to {
     transform: translateX(0);
     opacity: 1;
   }
+}
+/* hero-container css */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.hero-container {
+  gap: 5px;
+}
+.hero-container h2,
+p {
+  padding: 10px 5px;
 }
 
 /* media query for responsive */
