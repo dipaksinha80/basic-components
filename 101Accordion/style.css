@@ -12,20 +12,23 @@ body {
 .container {
   width: 100%;
   max-width: 1080px;
+  padding: 0 50px;
   margin: 0 auto;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .accordion-container {
+  width: 100%;
+  margin: 0 auto;
   box-shadow: 1px 2px 3px 0px blueviolet;
 }
 .question-box,
 .answer-box {
   display: flex;
   justify-content: space-between;
-
-  padding: 20px 40px;
+  padding: 1rem 2rem;
 }
 .question-box {
   background-color: aqua;
@@ -37,12 +40,15 @@ body {
   background-color: rgb(8, 214, 214);
 }
 .question-box i {
-  padding-left: 100px;
+  padding-left: 10%;
 }
 .answer-box {
   box-shadow: 1px 2px 3px 0px blueviolet;
   overflow: hidden;
   display: none;
+  /* to make animation */
+  max-height: 0;
+  transition: max-height 0.2s ease-in-out;
 }
 .answer-box .block {
   display: block;

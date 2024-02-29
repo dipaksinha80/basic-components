@@ -1,5 +1,4 @@
 var queBox = document.getElementsByClassName("question-box");
-// const ansBox = document.querySelector(".answer-box"); // not required
 var i;
 for (i = 0; i < queBox.length; i++) {
   queBox[i].addEventListener("click", function () {
@@ -10,6 +9,14 @@ for (i = 0; i < queBox.length; i++) {
       ansBox.style.display = "none";
     } else {
       ansBox.style.display = "block";
+    }
+    
+    //for applying animation we added this
+
+    if (ansBox.style.maxHeight) {
+      ansBox.style.maxHeight = null;
+    } else {
+      ansBox.style.maxHeight = ansBox.scrollHeight + "px";
     }
   });
 }
