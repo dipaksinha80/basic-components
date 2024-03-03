@@ -1,0 +1,45 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-container {
+  width: 400px;
+  height: 200px;
+  padding: 15px;
+  background-color: yellowgreen;
+  position: relative;
+  box-shadow: 4px 0px 10px rgb(88, 88, 85);
+}
+.box-container p {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 370px;
+  height: 150px;
+  text-align: justify;
+  overflow: hidden;
+}
+.box-container :nth-child(2) {
+  padding-top: 5px;
+}
+.arrow-box {
+  width: 40px;
+  height: 40px;
+  background-color: yellowgreen;
+  box-shadow: 0px 0px 0px rgb(88, 88, 85);
+  /* border: 1px solid #000; */
+  position: absolute;
+  top: 40px;
+  left: -12px;
+  z-index: -1;
+  transform: rotate(45deg);
+}
