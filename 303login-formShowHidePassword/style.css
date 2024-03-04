@@ -1,0 +1,185 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: darkblue;
+}
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1080px;
+}
+.box-container {
+  width: 100%;
+  height: auto;
+  padding: auto 0;
+  display: flex;
+  justify-content: space-between;
+}
+.box-container .left {
+  background-image: url(https://images.unsplash.com/photo-1604138659235-30cd5e27b49f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDh8fHJvYm90c3xlbnwwfHwwfHx8MA%3D%3D);
+  background-position: center;
+  display: flex;
+  width: 40%;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.box-container .left h1,
+p {
+  text-transform: capitalize;
+}
+
+/* right css started */
+.box-container .right {
+  width: 60%;
+  background-color: white;
+}
+.box-container .right form {
+  padding: 60px 50px;
+}
+.box-container .right form .social {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #000;
+  margin: 15px 0;
+  cursor: pointer;
+}
+.box-container .right form .social .social-icon {
+  padding: 5px 10px;
+  font-size: 1.5rem;
+}
+.box-container .right form .social .social-text {
+  font-size: 1.25rem;
+  text-align: center;
+}
+.hr-line {
+  margin: 30px 0;
+  width: 100%;
+  height: 0px;
+  border-bottom: 1px solid black;
+  text-align: center;
+  position: relative;
+  display: block;
+  padding: 0.05rem 0;
+}
+.hr-line span {
+  position: absolute;
+  background-color: white;
+  padding: 2px 5px;
+  left: 50%;
+  top: -15px;
+  transform: translateX(-50%);
+}
+.input-area {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.input-area > div:nth-child(2) {
+  margin-top: 20px;
+}
+input {
+  width: 100%;
+  height: 2.5rem;
+  /* position: relative; */
+  padding-left: 1rem;
+  outline: none;
+}
+.input-label {
+  position: absolute;
+  left: 20px;
+  pointer-events: none;
+  transition: 0.2s ease-out;
+  font-size: 16px;
+  /* top: 10px; */
+}
+input:focus + label {
+  /* top: -45; */
+  background-color: white;
+  font-size: 12px;
+  color: #2196f3;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin: 0.25rem 0;
+}
+input[type="checkbox"] {
+  width: 20px;
+  margin-right: 20px;
+}
+.checkbox p {
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+.signIn-btn button {
+  width: 100%;
+  height: 2.5rem;
+  font-size: 1rem;
+  border: 1px solid transparent;
+  border-bottom: 5px;
+  cursor: pointer;
+}
+.forget-password a {
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: blueviolet;
+  margin: 5px 0;
+  display: block;
+}
+.new-member-sign-up {
+  text-align: center;
+  text-transform: capitalize;
+}
+.new-member-sign-up span {
+  color: blueviolet;
+  font-size: 1.25rem;
+}
+
+/* media query */
+@media (max-width: 600px) {
+  .wrapper {
+    margin: 0 auto;
+  }
+  .box-container .right form {
+    padding: 20px 15px;
+  }
+  .box-container .right form .social .social-icon {
+    font-size: 0.75rem;
+  }
+  .box-container .right form .social .social-text {
+    font-size: 0.85rem;
+  }
+  input {
+    height: 1.75rem;
+    padding-left: 0.25rem;
+    margin: 0.25rem 0;
+  }
+  input[type="checkbox"] {
+    width: 15px;
+    margin-right: 10px;
+  }
+  .checkbox p {
+    font-size: 0.75rem;
+  }
+  .signIn-btn button {
+    height: 1.5rem;
+    font-size: 0.75rem;
+    background-color: royalblue;
+    color: white;
+  }
+}
